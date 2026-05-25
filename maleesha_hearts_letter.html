@@ -1,0 +1,227 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Lato:wght@300;400&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  #root { position:relative; min-height:100vh; overflow:hidden; background:#06040f; font-family:'Lato',sans-serif; }
+  canvas#bg { position:fixed; top:0; left:0; width:100%; height:100%; z-index:0; }
+  .content { position:relative; z-index:3; padding:60px 20px 100px; }
+  .card {
+    max-width:660px; margin:0 auto;
+    background:rgba(8,5,22,0.75);
+    border:0.5px solid rgba(255,160,210,0.2);
+    border-radius:24px; padding:48px 44px 56px;
+    backdrop-filter:blur(20px);
+    box-shadow:0 0 80px rgba(200,80,180,0.07), 0 0 0 1px rgba(255,255,255,0.03) inset;
+  }
+  .name-header { text-align:center; margin-bottom:32px; }
+  .to { font-size:11px; letter-spacing:5px; color:rgba(255,160,210,0.45); text-transform:uppercase; margin-bottom:10px; font-weight:300; }
+  .name {
+    font-family:'Playfair Display',serif; font-size:38px; font-weight:400;
+    background:linear-gradient(135deg,#ffd6ec 0%,#e890cc 45%,#c060b8 100%);
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+    letter-spacing:1px;
+  }
+  .divider { text-align:center; color:rgba(255,160,200,0.3); letter-spacing:10px; margin-bottom:32px; font-size:16px; }
+  .para {
+    font-size:15px; line-height:2; color:rgba(238,222,245,0.8); font-weight:300;
+    margin-bottom:20px; opacity:0; transform:translateY(12px);
+    transition:opacity 0.9s ease, transform 0.9s ease;
+  }
+  .para.visible { opacity:1; transform:translateY(0); }
+  em { font-family:'Playfair Display',serif; font-style:italic; color:#f0a8d8; }
+  .hl { color:#ffd6ec; font-weight:400; }
+  .closing { margin-top:32px; text-align:right; opacity:0; transform:translateY(12px); transition:opacity 0.9s ease,transform 0.9s ease; }
+  .closing.visible { opacity:1; transform:translateY(0); }
+  .sign { font-family:'Playfair Display',serif; font-style:italic; font-size:18px; color:#f0a8d8; }
+  .fh { position:fixed; pointer-events:none; z-index:10; animation:fhUp 4s ease-out forwards; }
+  @keyframes fhUp {
+    0%   { opacity:0; transform:translateY(0) scale(0.3) rotate(-15deg); }
+    15%  { opacity:1; transform:translateY(-50px) scale(1.1) rotate(8deg); }
+    60%  { opacity:0.8; }
+    100% { opacity:0; transform:translateY(-220px) scale(0.5) rotate(-5deg); }
+  }
+</style>
+
+<div id="root">
+  <canvas id="bg"></canvas>
+  <div class="content">
+    <div class="card">
+      <div class="name-header">
+        <div class="to">a letter for</div>
+        <div class="name">Maleesha Panchali</div>
+      </div>
+      <div class="divider">💗 · · 💗 · · 💗</div>
+      <div id="body">
+        <div class="para">Hi Maleesha,</div>
+        <div class="para">I just wanted to say I'm really sorry about what happened yesterday. Honestly, it wasn't about the tissue itself at all. The tissue I already had was something I got after requesting it… but <em>yours</em> was different. You gave yours to me without me even asking, and that's exactly why it became something so precious to me — probably more than you could ever imagine.</div>
+        <div class="para">So baba, let me tell you a little story. You already know it… but this <em>panditha karadarakari</em> should still read it properly. 🤍</div>
+        <div class="para">Once upon a time, there was a boy who was honestly too soft-hearted for this world. He didn't focus much on studies the way everyone expected him to. Instead, he spent his time learning about life in his own way — researching, exploring different fields, understanding people, technology, emotions, and the world itself. He gained knowledge from many places, but he failed to learn one important thing: <em>how to survive in society and how to truly belong in the adult world.</em></div>
+        <div class="para">Because of that, he trusted people too easily. He believed others would care the same way he cared for them. But life wasn't always kind to him. Slowly, disappointment after disappointment made him tired of people. So he closed his heart, buried his emotions deep inside, and started walking a rough path — where he convinced himself that success, achievements, and qualifications were the only things that mattered.</div>
+        <div class="para">Then one day, while he was at the office, he noticed <em>a simple girl</em> sitting quietly at a desk, waiting for an interview. At that moment, he never imagined that this pretty little girl would someday completely change the life of a boy who had almost forgotten how to feel human again.</div>
+        <div class="para">Days passed. At an office party, while everyone else was enjoying themselves, the boy was still busy working. Eventually, after a lot of pressure, he finally stopped for a while and joined the event.</div>
+        <div class="para">And then… while people were singing, he heard <em>a beautiful voice</em> beside him softly singing along. That's when he realized — it was the same girl he had seen sitting at that desk the other day.</div>
+        <div class="para">At first, he simply thought, <em>"Oh… nice. Someone who genuinely knows how to enjoy life."</em></div>
+        <div class="para">But without realizing it, that small moment taught him something important: no matter how hard life gets, <span class="hl">happiness matters too. Enjoying little moments matters too.</span></div>
+        <div class="para">After that, the boy slowly started opening his heart to the girl. Not suddenly, not perfectly — but little by little, with understanding, comfort, and trust.</div>
+        <div class="para">And maybe you won't believe this… but within just a few months, they created <em>memories worth a lifetime.</em></div>
+        <div class="para">That's when the boy realized something. This girl wasn't <em>"just a girl."</em></div>
+        <div class="para">She was <span class="hl">a princess.</span> A girl who could find happiness in the smallest things, who carried warmth everywhere she went, and who unknowingly brought life back into someone who thought his heart had already gone cold.</div>
+        <div class="para">And now, they're still here… still laughing, still arguing, still making memories, and still planning their next adventure together.</div>
+        <div class="para">And the funniest part is… that boy still doesn't fully realize <em>when exactly</em> she became such an important part of his life.</div>
+        <div class="para">But somehow, she did. Not only in his life, but even in his family too. 🤍</div>
+      </div>
+      <div class="closing" id="closing">
+        <div class="sign">— with something I can't quite name yet 🤍</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const canvas = document.getElementById('bg');
+const ctx = canvas.getContext('2d');
+
+function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+resize();
+window.addEventListener('resize', resize);
+
+// Stars
+const stars = Array.from({length:130}, () => ({
+  x: Math.random(), y: Math.random() * 0.75,
+  r: Math.random() * 1.4 + 0.3,
+  t: Math.random() * Math.PI * 2,
+  speed: Math.random() * 0.02 + 0.01
+}));
+
+// Floating hearts — many, varied sizes, all over
+const symbols = ['💗','💕','🤍','💖','💝','🌸','✨','💓','💞'];
+const hearts = Array.from({length:60}, () => ({
+  x: Math.random(),
+  y: Math.random(),
+  vy: Math.random() * 0.0012 + 0.0004,
+  vx: (Math.random()-0.5)*0.0004,
+  size: Math.random()*18+10,
+  sym: symbols[Math.floor(Math.random()*symbols.length)],
+  alpha: Math.random()*0.5+0.3,
+  phase: Math.random()*Math.PI*2,
+  wobble: Math.random()*0.002+0.001
+}));
+
+let t = 0;
+function draw() {
+  t += 0.016;
+  const w = canvas.width, h = canvas.height;
+  ctx.clearRect(0,0,w,h);
+
+  // Deep night sky gradient
+  const sky = ctx.createLinearGradient(0,0,0,h);
+  sky.addColorStop(0,'#03020d');
+  sky.addColorStop(0.35,'#07041a');
+  sky.addColorStop(0.7,'#0c0620');
+  sky.addColorStop(1,'#120828');
+  ctx.fillStyle = sky;
+  ctx.fillRect(0,0,w,h);
+
+  // Subtle purple aurora at top
+  const aurora = ctx.createRadialGradient(w*0.5, 0, 0, w*0.5, 0, w*0.7);
+  aurora.addColorStop(0,'rgba(140,60,200,0.08)');
+  aurora.addColorStop(0.5,'rgba(100,40,160,0.04)');
+  aurora.addColorStop(1,'rgba(80,20,120,0)');
+  ctx.fillStyle = aurora;
+  ctx.fillRect(0,0,w,h*0.5);
+
+  // Moon
+  const mx = w*0.8, my = h*0.12;
+  const mg = ctx.createRadialGradient(mx-10,my-10,5,mx,my,42);
+  mg.addColorStop(0,'#fffde8');
+  mg.addColorStop(0.5,'#fde68a');
+  mg.addColorStop(1,'#f59e0b');
+  ctx.fillStyle = mg;
+  ctx.beginPath(); ctx.arc(mx,my,42,0,Math.PI*2); ctx.fill();
+  const glow = ctx.createRadialGradient(mx,my,20,mx,my,140);
+  glow.addColorStop(0,'rgba(253,230,138,0.18)');
+  glow.addColorStop(1,'rgba(253,230,138,0)');
+  ctx.fillStyle = glow;
+  ctx.beginPath(); ctx.arc(mx,my,140,0,Math.PI*2); ctx.fill();
+
+  // Pink moon halo
+  const halo = ctx.createRadialGradient(mx,my,40,mx,my,200);
+  halo.addColorStop(0,'rgba(255,160,200,0.06)');
+  halo.addColorStop(1,'rgba(255,120,180,0)');
+  ctx.fillStyle = halo;
+  ctx.beginPath(); ctx.arc(mx,my,200,0,Math.PI*2); ctx.fill();
+
+  // Stars
+  stars.forEach(s => {
+    s.t += s.speed;
+    const a = 0.25 + 0.6*Math.abs(Math.sin(s.t));
+    ctx.fillStyle = `rgba(255,235,255,${a})`;
+    ctx.beginPath();
+    ctx.arc(s.x*w, s.y*h, s.r, 0,Math.PI*2);
+    ctx.fill();
+  });
+
+  // Clouds (dark, moody)
+  ctx.fillStyle = 'rgba(18,10,40,0.55)';
+  [[0.12,0.06,130,38],[0.38,0.04,170,42],[0.65,0.09,150,40],[0.85,0.16,110,30],[0.25,0.19,90,26]].forEach(([cx,cy,cw,ch])=>{
+    ctx.beginPath();
+    ctx.ellipse(cx*w,cy*h,cw,ch,0,0,Math.PI*2);
+    ctx.fill();
+  });
+
+  // Bottom glow (warm ground reflection)
+  const ground = ctx.createLinearGradient(0,h*0.82,0,h);
+  ground.addColorStop(0,'rgba(180,80,160,0)');
+  ground.addColorStop(1,'rgba(200,100,180,0.07)');
+  ctx.fillStyle = ground;
+  ctx.fillRect(0,h*0.82,w,h*0.18);
+
+  // Floating hearts
+  ctx.save();
+  hearts.forEach(hh => {
+    hh.y -= hh.vy;
+    hh.x += hh.vx + Math.sin(t*hh.wobble*60 + hh.phase)*0.0003;
+    if (hh.y < -0.05) { hh.y = 1.05; hh.x = Math.random(); }
+    ctx.globalAlpha = hh.alpha * (0.7 + 0.3*Math.sin(t*1.2 + hh.phase));
+    ctx.font = `${hh.size}px serif`;
+    ctx.fillText(hh.sym, hh.x*w, hh.y*h);
+  });
+  ctx.restore();
+
+  requestAnimationFrame(draw);
+}
+draw();
+
+// Letter reveal
+const paras = document.querySelectorAll('.para');
+const closing = document.getElementById('closing');
+let idx = 0;
+function next() {
+  if (idx < paras.length) {
+    paras[idx].classList.add('visible');
+    idx++;
+    setTimeout(next, idx < 3 ? 650 : 950);
+  } else {
+    setTimeout(() => closing.classList.add('visible'), 700);
+    setInterval(burstHearts, 900);
+  }
+}
+setTimeout(next, 900);
+
+// DOM heart bursts at random positions
+function burstHearts() {
+  const syms = ['💗','💕','🤍','💖','💝','✨','💓'];
+  for (let i=0; i<3; i++) {
+    setTimeout(() => {
+      const d = document.createElement('div');
+      d.className = 'fh';
+      d.textContent = syms[Math.floor(Math.random()*syms.length)];
+      d.style.cssText = `left:${5+Math.random()*90}%;bottom:${3+Math.random()*25}%;font-size:${14+Math.random()*16}px;animation-delay:${Math.random()*0.4}s;`;
+      document.body.appendChild(d);
+      setTimeout(()=>d.remove(), 4500);
+    }, i*200);
+  }
+}
+setInterval(burstHearts, 700);
+setTimeout(()=>{ for(let i=0;i<5;i++) setTimeout(burstHearts,i*300); },1500);
+</script>
